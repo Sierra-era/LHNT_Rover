@@ -1,9 +1,52 @@
-# LHNT_Rover
-The code and files used to make Longhorn Neurotech's RC Rover.
+# LHNT's Rover Project
 
-The rover uses an ESP32 that can be connected to by a computer using WiFi (currently) and communicates using Python running on a connected computer. 
-There are six degrees of freedom that move the rover: forward, backward, turn left, turn right, strafe left, strafe right. 
-The current version of the rover's code requires a specific 'STOP' command, which needs an extra degree of freedom. 
+## Table of Contents
 
-Once a computer is connected to the ESP32's WiFi, the python file can take integer or keyboard inputs which will be sent to the rover's ESP32 as an integer. 
-The rover will evaluate which motion it should make based on the given integer. It will continue that motion indefinitely (currently). 
+1. [Project Overview](#Project-Overview)
+2. [Team](#Team)
+3. [Features](#Features)
+
+---
+
+## Project Overview
+
+The rover project at LHNT aims to build a rover from scratch, combining efforts from the electronics, drivetrain, and hardware-software integration teams. The rover will have six degrees of freedom: moving forward, backward, turning left or right, and strafing left or right. It will communicate wirelessly with a computer that determines its movements. Ultimately, the rover will achieve free motion, controlled entirely by the user's neural data.
+
+## Team
+
+- **Electronics Team**
+  - Design the rover's circuit and code to be run on the ESP32.
+  - Team Lead: Victor Moran
+  - Members: Ibrahim Aksoy
+- **Drivetrain Team**
+  - Build the rover's body, shell, and obstacles for testing.
+  - Team Lead: Sydney Fawcett
+  - Members: Nandini Senthilkumar
+- **Hardware-Software Integration Team**
+  - Ensure the rover can wirelessly communicate with a computer, and ensure the reliability of this connection.
+  - Team Lead: Sierra Nguyen
+  - Members: Rishik Boddeti, Michael Chung, Aashvi Maithani
+
+## Features
+
+### Implemented Features
+
+1. #### Wireless Communication using WiFi
+     - The ESP32 is acting as a server which a computer can connect to using WiFi. Once connected, the computer can run the python code and control the rover. 
+2. #### Up to Six Degrees of Freedom
+     - The rover can move in 6 ways: forward, backward, turn left, turn right, strafe left, and strafe right. Not all of these movements are necessary for the rover's operation, so the user is able to choose which oens to use. 
+3. #### Indefinite Movement
+     - Currently the rover moves in one way indefinitely until it gets a new command. This requires the used of an extra degree of freedom for a stop command. 
+4. #### Mecanum Wheels
+    - The rover's wheels are mecanum wheels. This allows the rover to strafe left or right. 
+
+### Planned Features
+
+1. #### Wireless Communication using BlueTooth Low Energy
+     - We want to transition from using WiFi to using BlueTooth. This will make communicating with the rover easier. 
+2. #### Finite Movement
+     - We want to make the movements last for a certain amount of time, likely 200ms, to make controlling it using brain signals much easier.
+3. #### Obstacles
+     - Obstacles will make the testing process easier, but will also be cool for presentation purposes. 
+4. #### 3D Printed Shell
+     - Putting a shell on top of the rover will make it look nicer. :D
