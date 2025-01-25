@@ -1,3 +1,9 @@
 Future home of requirements necessary to run the code files. 
 
 Like boards, libraries, etc. 
+
+BLE Arduino 
+  
+
+BLE Python
+  bleak
