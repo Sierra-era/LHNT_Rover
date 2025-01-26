@@ -3,7 +3,10 @@ Future home of requirements necessary to run the code files.
 Like boards, libraries, etc. 
 
 BLE Arduino 
-  
+  libraries:
+  ESP32 BLE Arduino 
 
 BLE Python
+  libraries:
   bleak
+
